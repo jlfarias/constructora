@@ -92,17 +92,3 @@ Cada **institución** tiene una lista de sindicatos con los que tiene convenio. 
 A una empresa se le tiene que poder preguntar si puede _satisfacer_ a un solicitante.
 La condición para esto es que en la obra del solicitante pueda trabajar, al menos, uno de los trabajadores contratados por la empresa.
 
-
-## Etapa 4 - registro de trabajos hechos
-
-Agregar al modelo el registro de cada trabajo que una constructora hace para un determinado solicitante.
-Para esto, agregarle a los objetos que representan empresas la capacidad de entender el mensaje `darServicio`. P.ej. si `elFierroLoco` es una empresa y `juana` una solicitante, entonces haciendo
-```
-elFierroLoco.darServicio(juana)
-```
-se indica que se le está dando a Juana un servicio. Se asume que cada servicio insume una jornada de un trabajador.
-Debe pasar lo siguiente:
-- si el solicitante puede ser atendido (etapa 3), entonces elegir uno cualquiera de los trabajadores que puede ir a su obra, hacer que ese trabajador cobre (etapa 2) su honorario por jornada (etapa 1), y agregar al solicitante al conjunto de _clientes_ de la empresa.
-- caso contrario, lanzar un error.
-
-Agregar la posibilidad de preguntarle a una constructora: cuántos clientes tiene, y si tiene o no como cliente a un determinado solicitante.

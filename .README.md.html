@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>D:\carlos\educ\obj1\proyectosSueltos\serviciosProfesionales\.README.md.html</title>
+<title>C:\Users\ggonzalez\Documents\_desa\constructora\.README.md.html</title>
 
 
 <style type="text/css">
@@ -639,83 +639,73 @@ function setDocumentScrollTop(ypos)
 
 </head>
 <body class="markdown-body">
-<h1> <a id="servicios-profesionales" class="anchor" href="#servicios-profesionales" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Servicios profesionales</h1> 
-<p>En este ejercicio, se nos pide modelar empresas que ofrecen los servicios de profesionales que tienen contratados, a distintos tipos de solicitantes.</p> 
-<h2> <a id="etapa-1---profesionales-y-empresas" class="anchor" href="#etapa-1---profesionales-y-empresas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Etapa 1 - profesionales y empresas</h2> 
-<p>De cada <strong>profesional</strong> se debe poder obtener:</p> 
+<h1> <a id="constructoras" class="anchor" href="#constructoras" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Constructoras</h1> 
+<p>En este ejercicio, se nos pide modelar empresas constructoras que ofrecen los servicios de trabajadores que tienen contratados, a distintos tipos de solicitantes.</p> 
+<h2> <a id="etapa-1---trabajadores-y-constructoras" class="anchor" href="#etapa-1---trabajadores-y-constructoras" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Etapa 1 - trabajadores y constructoras</h2> 
+<p>De cada <strong>trabajador</strong> se debe poder obtener:</p> 
 <ul> 
- <li>en qu&eacute; <em>universidad</em> estudiaron, esto se debe asignar para cada profesional.</li> 
- <li>sus <em>honorarios por hora</em> de trabajo, c&oacute;mo se determina depende del tipo de profesional.</li> 
- <li>en qu&eacute; <em>provincias</em> puede trabajar, c&oacute;mo se determina depende del tipo de profesional.</li> 
+ <li>a qu&eacute; <em>sindicato</em> pertenece, esto se debe asignar para cada trabajador.</li> 
+ <li>sus <em>honorarios por jornada</em> de trabajo, c&oacute;mo se determina depende del tipo de trabajador.</li> 
+ <li>en qu&eacute; <em>localidades</em> puede trabajar, c&oacute;mo se determina depende del tipo de trabajador.</li> 
 </ul> 
-<p>De cada <strong>universidad</strong> nos va a interesar: en qu&eacute; provincia est&aacute;, y qu&eacute; honorarios por hora de trabajo recomienda para los profesionales.</p> 
-<p>Deben contemplarse distintos tipos de profesionales, de acuerdo a lo que se indica a continuaci&oacute;n.</p> 
+<p>De cada <strong>sindicato</strong> nos va a interesar: en qu&eacute; localidad est&aacute;, y qu&eacute; honorarios por jornada de trabajo recomienda para sus trabajadores.</p> 
+<p>Deben contemplarse distintos tipos de trabajadores, de acuerdo a lo que se indica a continuaci&oacute;n.</p> 
 <ul> 
- <li> <strong>Profesionales vinculados a una universidad</strong>:<br /> pueden trabajar solamente en la provincia donde est&aacute; la universidad, los honorarios son los que recomienda la universidad.</li> 
- <li> <strong>Profesionales asociados del Litoral</strong>: pueden trabajar en Entre R&iacute;os, Santa Fe y Corrientes, cobran 3000 pesos por hora de trabajo.</li> 
- <li> <strong>Profesionales libres</strong>: se indica para cada uno en qu&eacute; provincias pueden trabajar y los honorarios por hora, adem&aacute;s de la universidad.</li> 
+ <li> <strong>Trabajadores afiliados a un sindicato</strong>:<br /> pueden trabajar solamente en la localidad donde est&aacute; el sindicato, los honorarios son los que recomienda el sindicato.</li> 
+ <li> <strong>Trabajadores de la Cooperativa del Oeste</strong>: pueden trabajar en Mor&oacute;n, Hurlingham, El Palomar y Villa Tesei, cobran 250 pesos por jornada de trabajo.</li> 
+ <li> <strong>Trabajadores libres</strong>: se indica para cada uno en qu&eacute; localidades pueden trabajar y los honorarios por jornada, adem&aacute;s del sindicato.</li> 
 </ul> 
-<p>Cada <strong>empresa de servicios</strong> contrata a varios profesionales. Para cada una se indica un honorario de referencia.</p> 
+<p>Cada <strong>constructora</strong> contrata a varios trabajadores. Para cada una se indica un honorario de referencia.</p> 
 <p>A partir de este modelo, tiene que poder obtenerse para una empresa:</p> 
 <ul> 
- <li>el conjunto formado por sus <em>profesionales caros</em>.<br /> O sea, aquellos cuyo honorario es mayor al honorario de referencia de la empresa.</li> 
- <li>el conjunto de las <em>universidades formadoras</em>, o sea, las universidades donde estudiaron sus profesionales contratados, sin repetidos.</li> 
- <li>el profesional <em>m&aacute;s barato</em> (o sea, que sus honorarios son los m&aacute;s bajos).</li> 
- <li>si una determinada <em>provincia est&aacute; cubierta</em> (o sea, que haya al menos un profesional que pueda trabajar en ella).</li> 
- <li>cu&aacute;ntos (un n&uacute;mero) de sus profesionales contratados estudi&oacute; en una determinada universidad.</li> 
- <li> <strong>esta es m&aacute;s dif&iacute;cil</strong><br /> dado un profesional, si es <em>poco atractivo</em> para la empresa.<br /> Esto es: si para cada provincia en la que puede trabajar el profesional, la empresa cuenta con otro que tambi&eacute;n puede cubrir esa provincia, y que cobra m&aacute;s barato.</li> 
+ <li>el conjunto formado por sus <em>trabajadores baratos</em>.<br /> O sea, aquellos cuyo honorario es menor al honorario de referencia de la empresa.</li> 
+ <li>el conjunto de los <em>sindicatos intervinientes</em>, o sea, los sindicatos a los que pertenecen sus trabajadores, sin repetidos.</li> 
+ <li>el trabajador <em>m&aacute;s caro</em> (o sea, que sus honorarios son los m&aacute;s altos).</li> 
+ <li>si una determinada localidad <em>est&aacute; cubierta</em> (o sea, que haya al menos un trabajador que pueda trabajar all&iacute;).</li> 
+ <li>cu&aacute;ntos (un n&uacute;mero) de sus trabajadores contratados pertenece a un determinado sindicato.</li> 
+ <li> <strong>esta es m&aacute;s dif&iacute;cil</strong><br /> dado un trabajador, si es <em>poco atractivo</em> para la empresa.<br /> Esto es: si para cada localidad en la que puede trabajar el profesional, la empresa cuenta con otro que tambi&eacute;n puede cubrir esa localidad, y que cobra m&aacute;s barato.</li> 
 </ul> 
 <h3> <a id="comentario-que-puede-ayudar-para-la-resoluci&oacute;n" class="anchor" href="#comentario-que-puede-ayudar-para-la-resoluci%C3%B3n" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Comentario que puede ayudar para la resoluci&oacute;n</h3> 
-<p>Cada universidad debe acordarse provincia y honorarios recomendados, se le setean y listo.<br /> Por otro lado, <em>est&aacute; mal</em> que los profesionales vinculados se acuerden de qu&eacute; provincias tienen habilitadas y cu&aacute;les son sus honorarios; le tienen que pedir estos datos a la Universidad.</p> 
-<p>De paso: <strong>OJO</strong> que la Universidad est&aacute; en <em>una</em> provincia, pero el profesional tiene que devolver una <em>colecci&oacute;n</em> de provincias. Un profesional vinculado devolver&aacute; una colecci&oacute;n con un solo elemento.</p> 
+<p>Cada sindicato debe acordarse localidad y honorarios recomendados, se le setean y listo.<br /> Por otro lado, <em>est&aacute; mal</em> que los trabajadores afiliados se acuerden de qu&eacute; localidades tienen habilitadas y cu&aacute;les son sus honorarios; le tienen que pedir estos datos al sindicato.</p> 
+<p>De paso: <strong>OJO</strong> que el sindicato est&aacute; en <em>una</em> localidad, pero el trabajador tiene que devolver una <em>colecci&oacute;n</em> de localidades. Un trabajador afiliado devolver&aacute; una colecci&oacute;n con un solo elemento.</p> 
 <br /> 
 <h2> <a id="test-de-la-etapa-1" class="anchor" href="#test-de-la-etapa-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test de la etapa 1</h2> 
-<p>Tenemos estas universidades:</p> 
+<p>Tenemos estos sindicatos:</p> 
 <ul> 
- <li>de San Mart&iacute;n: est&aacute; en la provincia de Buenos Aires, los honorarios recomendados son de 3500 pesos.</li> 
- <li>de Rosario: est&aacute; en la provincia de Santa Fe, los honorarios recomendados son de 2800 pesos.</li> 
- <li>de Corrientes: est&aacute; en la provincia de Corrientes, los honorarios recomendados son de 4200 pesos.</li> 
- <li>de Hurlingham: est&aacute; en la provincia de Buenos Aires, los honorarios recomendados son de 8800 pesos.</li> 
+ <li>UOCRA Castelar: est&aacute; en la localidad de Castelar, los honorarios recomendados son de 350 pesos.</li> 
+ <li>Constructoras Siglo XXI: est&aacute; en Villa Tesei, los honorarios recomendados son de 280 pesos.</li> 
+ <li>Amigos de Vlad: est&aacute;n en Aldo Bonzi, los honorarios recomendados son de 420 pesos.</li> 
+ <li>Castelar Workers: est&aacute; en Castelar, los honorarios recomendados son de 880 pesos.</li> 
 </ul> 
 <p>y estos profesionales</p> 
 <ul> 
- <li>Juana, vinculada, estudi&oacute; en la Univ. de Rosario.</li> 
- <li>Melina, asociada el Litoral, estudi&oacute; en la Univ. de Corrientes.</li> 
- <li>Roc&iacute;o, libre, estudi&oacute; en la Univ. de Hurlingham, honorarios 5000 pesos, puede trabajar en Santa Fe, C&oacute;rdoba y Buenos Aires.</li> 
- <li>Luciana, libre, estudi&oacute; en la Univ. de Rosario, honorarios 3200 pesos, puede trabajar en Santa Fe y Entre R&iacute;os.</li> 
+ <li>Juana, afiliada, pertenece a Constructores Siglo XXI.</li> 
+ <li>Melina, cooperativista, pertenece a Amigos de Vlad.</li> 
+ <li>Roc&iacute;o, libre, pertenece a Castelar Workers, honorarios 500 pesos, puede trabajar en Villa Tesei, Ciudad Evita y Castelar.</li> 
+ <li>Luciana, libre, pertenece a Constructoras Siglo XXI, honorarios 320 pesos, puede trabajar en Villa Tesei y El Palomar.</li> 
 </ul> 
-<p>Una empresa que contrate a estos cuatro profesionales, y cuyos honorarios de referencia son 3500 pesos, debe tener</p> 
+<p>Una constructora que contrate a estas cuatro trabajadoras, y cuyos honorarios de referencia son 350 pesos, debe tener</p> 
 <ul> 
- <li>como <em>profesionales caros</em>, solamente a Roc&iacute;o.</li> 
- <li>como <em>universidades formadoras</em>, a las de Rosario, Corrientes y Hurlingham.</li> 
- <li>como <em>profesional m&aacute;s barato</em> a Juana.</li> 
- <li>las provincias de Santa Fe y C&oacute;rdoba est&aacute;n cubiertas, pero Misiones no.</li> 
- <li>dos de sus profesionales estudiaron en Rosario, uno en Hurlingham, ninguno (o sea cero) en San Mart&iacute;n.</li> 
+ <li>como <em>trabajadores baratos</em>, a Juana, a Melina y a Luciana.</li> 
+ <li>como <em>sindicatos intervinientes</em>, a Constructoras Siglo XXI, Amigos de Vlad y Castelar Workers.</li> 
+ <li>como <em>trabajador m&aacute;s caro</em> a Roc&iacute;o.</li> 
+ <li>las localidades de Villa Tesei y Ciudad Evita est&aacute;n cubiertas, pero Tapiales no.</li> 
+ <li>dos de sus trabajadoras pertenecen a Constructoras Siglo XXI, una en Castelar Workers, ninguna (o sea cero) en UOCRA Castelar.</li> 
 </ul> 
 <p>Hacer los tests que sean necesarios para verificar esto. Se puede usar <code>fixture</code> para definir informaci&oacute;n que se usa en varios tests dentro de un <em>describe file</em>.</p> 
 <br /> 
 <h2> <a id="etapa-2---cobros" class="anchor" href="#etapa-2---cobros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Etapa 2 - cobros</h2> 
-<p>Agregar al modelo la consecuencia de que un profesional cobre un importe de dinero, de acuerdo a estas reglas:</p> 
+<p>Agregar al modelo la consecuencia de que un trabajador cobre un importe de dinero, de acuerdo a estas reglas:</p> 
 <ul> 
- <li>los <strong>profesionales vinculados</strong> le donan la mitad a la universidad, y la otra mitad la gastan inmediatamente sin que quede registro en la aplicaci&oacute;n. Hay que mantener el total recibido por donaciones de cada universidad.</li> 
- <li>los <strong>profesionales asociados</strong> le dan todo lo que cobran a la <em>Asociaci&oacute;n de Profesionales del Litoral</em>. Agregar un objeto que represente a esta Asociaci&oacute;n, que mantiene el total recaudado.</li> 
- <li>los <strong>profesionales libres</strong> se guardan todo lo que cobran. Debe mantenerse el total recaudado por cada uno. <br /> Un profesional libre le puede <em>pasar</em> una cantidad X de dinero a otro: se resta X del total recaudado, y el otro cobra X. P.ej. si <code>ruben</code> tiene 10000 de total recaudado, <code>nora</code> tiene 12000, y hacemos <pre><code>nora.pasarDinero(ruben,4000)
-</code></pre> entonces <code>nora</code> pasa a tener 8000, y <code>ruben</code> 14000 (porque cobr&oacute; 4000).</li> 
+ <li>los <strong>trabajadores afiliados</strong> le donan un 20% al sindicato, y el resto lo gastan inmediatamente sin que quede registro en la aplicaci&oacute;n. Hay que mantener el total recibido por donaciones de cada sindicato.</li> 
+ <li>los <strong>cooperativistas</strong> ponen todo lo que cobran en la <em>Cooperativa del Oeste</em>. Agregar un objeto que represente a esta Cooperativa, que mantiene el total recaudado.</li> 
+ <li>los <strong>trabajadores libres</strong> se guardan todo lo que cobran. Debe mantenerse el total recaudado por cada uno. <br /> Un trabajador libre le puede <em>pasar</em> una cantidad X de dinero a otro: se resta X del total recaudado, y el otro cobra X. P.ej. si <code>flavia</code> tiene 10000 de total recaudado, <code>tito</code> tiene 12000, y hacemos <pre><code>tito.pasarDinero(flavia, 4000)
+</code></pre> entonces <code>tito</code> pasa a tener 8000, y <code>flavia</code> 14000 (porque cobr&oacute; 4000).</li> 
 </ul> 
 <br /> 
 <h2> <a id="etapa-3---solicitantes" class="anchor" href="#etapa-3---solicitantes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Etapa 3 - solicitantes</h2> 
-<p>Los <strong>solicitantes</strong> pueden ser personas o instituciones. Nos interesa saber para cada solicitante si puede (o no) ser <em>atendido por un profesional</em>.</p> 
-<p>De cada <strong>persona</strong> se debe indicar en qu&eacute; provincia vive. Puede ser atendida por los profesionales que pueden trabajar en la provncia donde vive la persona. Cada <strong>instituci&oacute;n</strong> tiene una lista de universidades que reconoce. Puede ser atendida por los profesionales que estudiaron en alguna de las universidades reconocidas por la instituci&oacute;n.</p> 
-<p>A una empresa se le tiene que poder preguntar si puede <em>satisfacer</em> a un solicitante. La condici&oacute;n para esto es que el solicitante pueda ser atendido por, al menos, uno de los profesionales contratados por la empresa.</p> 
-<h2> <a id="etapa-4---registro-de-trabajos-hechos" class="anchor" href="#etapa-4---registro-de-trabajos-hechos" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Etapa 4 - registro de trabajos hechos</h2> 
-<p>Agregar al modelo el registro de cada trabajo que una empresa de servicios hace para un determinado solicitante. Para esto, agregarle a los objetos que representan empresas la capacidad de entender el mensaje <code>darServicio</code>. P.ej. si <code>laMejor</code> es una empresa y <code>mirna</code> una solicitante, entonces haciendo</p> 
-<pre><code>laMejor.darServicio(mirna)
-</code></pre> 
-<p>se indica que se le est&aacute; dando a Mirna un servicio. Se asume que cada servicio insume una hora de tiempo de un profesional. Debe pasar lo siguiente:</p> 
-<ul> 
- <li>si el solicitante puede ser atendido (etapa 3), entonces elegir uno cualquiera de los profesionales que puede atenderlo, hacer que ese profesional cobre (etapa 2) su honorario por hora (etapa 1), y agregar al solicitante al conjunto de <em>clientes</em> de la empresa.</li> 
- <li>caso contrario, lanzar un error.</li> 
-</ul> 
-<p>Agregar la posibilidad de preguntarle a una empresa de servicios: cu&aacute;ntos clientes tiene, y si tiene o no como cliente a un determinado solicitante.</p>
+<p>Los <strong>solicitantes</strong> pueden ser personas o instituciones. Nos interesa saber para cada solicitante si puede (o no) <em>tener a un trabajador en su obra</em>.</p> 
+<p>De cada <strong>persona</strong> se debe indicar en qu&eacute; localidad vive. Puede ser atendida por los profesionales que pueden trabajar en la localidad donde vive. Cada <strong>instituci&oacute;n</strong> tiene una lista de sindicatos con los que tiene convenio. Puede incluir en su obra a cualquiera de los trabajadores que pertenecen a alguno de esos sindicatos.</p> 
+<p>A una empresa se le tiene que poder preguntar si puede <em>satisfacer</em> a un solicitante. La condici&oacute;n para esto es que en la obra del solicitante pueda trabajar, al menos, uno de los trabajadores contratados por la empresa.</p>
 </body>
 </html>
