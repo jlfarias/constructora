@@ -1,0 +1,39 @@
+import profesionales.*
+import sindicatos.*
+import constructoras.*
+
+test "test1" {
+
+	const uocra = new Sindicato(localidad = "castelar", honorariosRecomendados = 350)
+	const sigloXXI = new Sindicato(localidad = "villa Tesei", honorariosRecomendados = 280)
+	const amigosDeVlad = new Sindicato(localidad = "Aldo Bonzi", honorariosRecomendados = 420)
+	const castelarWokers = new Sindicato(localidad = "castelar", honorariosRecomendados = 880)
+	
+	const juana = new TrabajadorAfiliado(sindicato = sigloXXI)
+	const melina = new TrabajadorCooperativista(sindicato = amigosDeVlad)
+	const rocio = new TrabajadorLibre(sindicato = castelarWokers, honorarios = 500 )
+	rocio.allLocalidad(["Villa Tesei", "Ciudad Evita", "Castelar"])
+	const luciana = new TrabajadorLibre(sindicato = sigloXXI, honorarios = 320)
+	luciana.allLocalidad(["Villa Tesei", "El Palomar"])
+	
+	const constructora = new Constructora(honorariosReferencia = 350)
+	constructora.alltrabajadores([juana, melina, rocio, luciana]) 
+	
+	assert.equals(350, uocra.honorariosRecomendados())
+	
+	/* profe en el repl no salen los nombres  salen cmo un/a trabajadorAfiliado 
+	   lo mismo pasa con el trabajador que mas gana	*/
+	
+	/*assert.equals(un/a  TrabajadorAfiliado, un/a  TrabajadorCooperativista, un/a  TrabajadorLibre,
+		constructora.trabajadoresBaratos()) */
+	//assert.equals([un/a  TrabajadorLibre], constructora.trabajadorMasCaro())
+	assert.equals(true, constructora.localidadCubierta("Castelar"))
+	assert.equals(false, constructora.localidadCubierta("tapiales"))
+	assert.equals(true, constructora.localidadCubierta("Villa Tesei"))
+	assert.equals(true, constructora.localidadCubierta("Ciudad Evita"))
+	
+	assert.equals(1, constructora.cuantosPertecenA_(castelarWokers))	
+	assert.equals(2, constructora.cuantosPertecenA_(sigloXXI))
+	assert.equals(0, constructora.cuantosPertecenA_(uocra))}
+	
+	
